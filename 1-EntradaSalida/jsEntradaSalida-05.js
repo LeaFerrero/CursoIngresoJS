@@ -13,7 +13,7 @@ function mostrar()
 	mensaje = "Usted se llama " + nombre;
 	mensaje = mensaje + " y tiene ";
 	mensaje = mensaje + edad;
-	mensaje = mensaje + " años"
+	mensaje = mensaje + " años";
 
 	alert(mensaje);
 }
