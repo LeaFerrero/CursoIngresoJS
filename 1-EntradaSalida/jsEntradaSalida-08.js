@@ -13,10 +13,12 @@ function SacarResto()
 	dividendo = document.getElementById("txtIdNumeroDividendo").value;
 	divisor = document.getElementById("txtIdNumeroDivisor").value;
 
-	resto = parseInt(dividendo) % parseInt(divisor);
+	dividendo = parseInt(dividendo);
+	divisor = parseInt(divisor);
+
+	resto = dividendo % divisor;
 
 	mensaje = "El resto es " + resto;
 
 	alert(mensaje);
-
 }
