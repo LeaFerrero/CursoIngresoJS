@@ -10,5 +10,147 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  */
 function CalcularPrecio () 
 {
- 	
-}
+    let precio;
+    let cantidadLamparas;
+    let descuento;
+    let precioTotal;
+    let montoDescontado;
+    let precioConDescuento;
+    
+    
+    precio = 35;
+    cantidadLamparas = document.getElementById("txtIdCantidad").value;
+
+    cantidadLamparas = parseInt(cantidadLamparas);
+   
+    precioTotal = precio * cantidadLamparas;
+    
+    if(cantidadLamparas >= 6)
+    {
+        descuento = 50;
+    }
+    else
+    {   
+        descuento = 0;
+    }         
+    
+    montoDescontado = precioTotal * descuento / 100;
+
+    precioConDescuento = precioTotal - montoDescontado;
+
+    document.getElementById("txtIdprecioDescuento").value = precioConDescuento; 
+}       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        /* if(cantidadLamparas == 5)
+        {
+            if(marca == "ArgentinaLuz")
+            {
+                descuento = 40;
+            }
+            else 
+            {
+                descuento = 30;
+            }
+        }
+        else 
+        {
+            if(cantidadLamparas == 4)
+            {
+                if(marca == "Argentinaluz" || marca == "FelipeLamparas")
+                {
+                    descuento = 25;
+                }
+                else
+                {
+                    descuento = 20;
+                }
+            }
+            else 
+            {
+                if (cantidadLamparas == 3)
+                {
+                    if(marca == "ArgentinaLuz")
+                    {
+                        descuento = 15;
+                    }
+                    else 
+                    {
+                        if(marca = "FelipeLamparas")
+                        {
+                            descuento = 10;
+                            
+                        }
+                        else
+                        {
+                            descuento = 5;
+                        }
+                    }
+                                
+                }
+
+            }
+
+        }*/
+    
+
+
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -15,13 +15,13 @@ function mostrar()
 	}
 	else 
 	{
-		if(edad <= 12)
+		if(edad <= 17 && edad >= 13)
 		{
-			mensaje =  "Es menor de edad";
+			mensaje =  "Es adolescente";
 		}
 		else
 		{
-			mensaje = "Es adolsescente";
+			mensaje = "Es menor";
 		}
 	}
 	
