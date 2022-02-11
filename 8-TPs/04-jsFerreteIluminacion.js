@@ -11,73 +11,33 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
 function CalcularPrecio () 
 {
     let precio;
-    let cantidadLamparas;
+    let impuesto;
     let descuento;
+    let cantidadLamparas;
+    let marca;
     let precioTotal;
     let montoDescontado;
-    let precioConDescuento;
-    
+    let precioFinal;
     
     precio = 35;
-    cantidadLamparas = document.getElementById("txtIdCantidad").value;
-
-    cantidadLamparas = parseInt(cantidadLamparas);
-   
-    precioTotal = precio * cantidadLamparas;
+    impuesto = 10;
+    descuento = 0;
     
-    if(cantidadLamparas >= 6)
+    cantidadLamparas = document.getElementById("txtIdCantidad").value;
+    marca = document.getElementById("Marca").value;
+    
+    cantidadLamparas = parseInt(cantidadLamparas);
+    
+    precioTotal = precio * cantidadLamparas;
+
+   
+    if(cantidadLamparas > 5)
     {
         descuento = 50;
     }
     else
     {   
-        descuento = 0;
-    }         
-    
-    montoDescontado = precioTotal * descuento / 100;
-
-    precioConDescuento = precioTotal - montoDescontado;
-
-    document.getElementById("txtIdprecioDescuento").value = precioConDescuento; 
-}       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-       
-        /* if(cantidadLamparas == 5)
+        if(cantidadLamparas == 5)
         {
             if(marca == "ArgentinaLuz")
             {
@@ -111,20 +71,75 @@ function CalcularPrecio ()
                     }
                     else 
                     {
-                        if(marca = "FelipeLamparas")
+                        if(marca == "FelipeLamparas")
                         {
                             descuento = 10;
-                            
                         }
                         else
                         {
                             descuento = 5;
                         }
                     }
-                                
                 }
-
             }
+        }         
+    }                       
+                          
+    montoDescontado = precioTotal * descuento / 100;
+
+    precioFinal = precioTotal - montoDescontado;
+
+    if(precioFinal > 120)
+    {
+        montoConImpuesto = precioFinal * impuesto / 100;
+
+        precioFinal = precioFinal + montoConImpuesto;
+    
+        alert("Usted pago " + montoConImpuesto + " de ingresos brutos");
+        
+    }
+
+    document.getElementById("txtIdprecioDescuento").value = precioFinal; 
+    
+}      
+
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+        /* 
 
         }*/
     
