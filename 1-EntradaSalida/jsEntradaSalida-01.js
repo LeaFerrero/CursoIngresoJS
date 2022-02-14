@@ -7,39 +7,7 @@ Necesitamos saber cuántos Mts de varillas de plástico y cuántos de papel son 
 "*/
 function mostrar()
 {
-	let diametroMayorCm;
-	let diametroMenorCm;
-	let diametroMayorMts;
-	let diametroMenorMts;
-	let area;
-	let cometasAConstruir;
-	let papel;
-	let papelExtra;
-	let papelTotal;
-	let perimetro;
+	
 
-	diametroMayorCm = prompt("Ingres el diametro mayor en centimetros");
-	diametroMenorCm = prompt("Ingrese el diametro menor en centimetros");
-
-	diametroMayorCm = parseFloat(diametroMayorCm);
-	diametroMenorCm = parseFloat(diametroMenorCm);
-
-	diametroMayorMts = diametroMayorCm / 100;
-	diametroMenorMts = diametroMenorCm / 100;
-
-	area = diametroMayorMts * diametroMenorMts / 2
-
-	cometasAConstruir = 10;
-
-	papel = area * cometasAConstruir;
-
-	papelExtra = papel * 0.10;
-
-	papelTotal = papel + papelExtra;
-
-	alert(papelTotal);
-
-
-
+	
 }
-
