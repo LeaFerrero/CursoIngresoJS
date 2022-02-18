@@ -7,13 +7,11 @@ secreto del 1 al 100, en la pantalla del juego
 “Usted es un ganador!!! y en solo X intentos”.
 de no ser igual se debe informar si “falta…”  para llegar al número secreto  o si “se pasó…”  del número secreto.
 */
-var numeroSecreto; 
-var contadorIntentos;
-var numeroIngresado;
-var contador;
-var mensaje;
-
-contador = 1;
+let numeroSecreto; 
+let contadorIntentos;
+let numeroIngresado;
+let contador;
+let mensaje;
 
 function comenzar()
 {
@@ -27,39 +25,42 @@ function comenzar()
 function verificar()
 { 
   numeroIngresado = document.getElementById("txtIdNumero").value;
-   
-	if(numeroIngresado < 1)
+
+  numeroIngresado = parseInt(numeroIngresado);
+
+  contador = 0;
+
+  if(numeroIngresado < 1 || numeroIngresado > 100)
   {
     mensaje = "Ingrese un numero del 1 al 100"
   }
   else
   {
-    if(numeroIngresado == numeroSecreto)
+    switch(numeroSecreto)
     {
-      mensaje = "Usted es un ganador!!! y en solo " + contador + " intentos."
+      case undefined:
+        mensaje = "Genere un numero";
+      break;
+      
+      case numeroIngresado:
+        contador ++;
+        mensaje = "Usted es un ganador!!! y en solo " + contador + " intentos.";
+      break;
+      
+      default:
+        if(numeroIngresado < numeroSecreto)
+        {
+          contador ++;
+          mensaje = "Falta...";
+        }
+        else
+        {
+          contador ++;
+          mensaje = "Se pasó...";
+        } 
+      break;
     }
-    else
-    {
-      if(numeroIngresado < numeroSecreto)
-      {
-        contador ++;
-        mensaje = "Falta..."
-      }
-      else
-      {
-        contador ++;
-        mensaje = "Se pasó..."
-      }
-    } 
-  }
-
-  switch(numeroSecreto)
-  {
-    case undefined:
-      mensaje = "Genere un numero"
-    break
-  }
-
+  } 
 
   document.getElementById("txtIdIntentos").value = contador;
 
