@@ -5,27 +5,61 @@ e informar la suma acumulada y el promedio.
 
 function mostrar()
 {
-	let numero;
-	let acumulador;
-	let respuesta;
-	let contador;
-	let promedio;
+	let altura;
+	let edad;
+	let temperatura;
+	let sexo;
+	let nota;
+	let nombre;
+	let contadorDeAlumnos;
 
-	acumulador = 0;
-	contador = 0;
-	respuesta = "si";
+	contadorDeAlumnos = 0;
 
-	while(respuesta == "si")
+	while(contadorDeAlumnos < 5)
 	{
-		numero = prompt("Ingrese un numero");
-		numero = parseFloat(numero);
-		acumulador += numero;
-		respuesta = prompt("Quiere ingresar otro numero?").toLocaleLowerCase();
-		contador ++;
+		/*altura = prompt("Ingrese su altura en cm");
+		altura = parseInt(altura);
+		
+		while(altura < 0 || altura > 250)
+		{
+			altura = prompt("Dato no valido. Ingrese su altura en cm");
+		}
+		
+		edad = prompt("Ingrese su edad");
+		edad = parseInt(edad);
+
+		while(isNaN(edad))
+		{
+			edad = prompt("Dato no valido. Ingrese su edad");
+		}
+		
+		temperatura = prompt("Ingrese su temperatura")
+
+		while(isNaN(temperatura))
+		{
+			temperatura = prompt("Dato no valido. Ingrese su temperatura");
+		}
+		
+		sexo = prompt("Ingrese su sexo f, m o nb");
+		sexo = sexo.toLowerCase();
+
+		while(sexo != "f" && sexo !="m" && sexo != "nb")
+		{
+			sexo = prompt("Dato no valido. Ingrese su sexo f, m o nb");
+		}*/
+
+		nota = prompt("Ingrese su nota");
+		nombre = parseFloat(nota);
+
+		while(nota < 0 || nota > 10 || isNaN(nota))
+		{
+			nota = prompt("Dato no valido. Ingrese su nota");
+		}
+
+		nombre = prompt("Ingrese su nombre");
+
+
+
+		contadorDeAlumnos++;
 	}
-
-	promedio = acumulador / contador;
-
-	document.getElementById("txtIdSuma").value = acumulador;
-	document.getElementById("txtIdPromedio").value = promedio;
 }
