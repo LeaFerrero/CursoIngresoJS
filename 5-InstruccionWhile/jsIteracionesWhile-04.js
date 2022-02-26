@@ -19,3 +19,4 @@ function mostrar()
 	
 	document.getElementById("txtIdNumero").value = mensaje;
 }
+

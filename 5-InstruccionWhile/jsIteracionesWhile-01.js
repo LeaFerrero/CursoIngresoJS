@@ -11,6 +11,6 @@ function mostrar()
 	{
 		numero++;
 		alert(numero);
+		
 	}
-	
 }

@@ -9,6 +9,8 @@ function mostrarAumento()
 	var descuento;
 	var operacion;
 	var importeFinal;
+	var quioasd
+	
 
 	importe = document.getElementById("txtIdImporte").value;
 	importe = parseInt(importe);
@@ -17,7 +19,8 @@ function mostrarAumento()
 
 	operacion = (100 - descuento) / 100;
 	
-	importeFinal = importe * operacion;	
+	importeFinal = importe * operacion; 
 
-	document.getElementById("txtIdResultado").value = importeFinal;
+	document.getElementById("txtIdResultado").value = importeFinal; console
+	
 }
