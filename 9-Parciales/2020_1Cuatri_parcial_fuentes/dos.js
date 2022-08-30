@@ -15,14 +15,4 @@ f) El tipo mas caro */
 function mostrar()
 {
 
-    if(maximo > valorIngresado || bandera == false)
-    {
-    maximo = valorIgresado;
-    }
-    if(minimo < valorIngresador || bandera == false)
-    {
-    minimo = valorIngresado;
-    vandera = true;
-    }
-
 }

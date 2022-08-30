@@ -4,7 +4,7 @@ Al presionar el botón pedir un sexo
 function mostrar()
 {
 	let sexo;
-	let mensaje;
+	
 
 	sexo = prompt("Ingrese su sexo (m para masculino y f para femenino)");
 
